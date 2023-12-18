@@ -25,92 +25,92 @@ public class Main
         printAssert(solution(map1), 11);
         printAssert(solution(map2), 7);
         printAssert(solution(map3), 3);
-        System.out.println(solution(new int[][]{
+        printAssert(solution(new int[][]{
 	        {0,1,0},
 	        {1,1,0},
             {0,0,0}
-	    }));
-	    System.out.println(solution(new int[][]{
+	    }), 5);
+	    printAssert(solution(new int[][]{
 	        {0,0,0,0,0,0},
 	        {1,1,0,1,1,0},
 	        {0,0,0,0,0,0},
 	        {0,1,1,1,1,1},
 	        {0,1,1,1,1,1},
 	        {0,0,0,0,0,0}
-	    }));
-	    System.out.println(solution(new int[][]{
+	    }), 11);
+	    printAssert(solution(new int[][]{
 	        {0,0,0,0,0,0},
 	        {0,0,0,0,0,0},
 	        {0,0,0,0,0,0},
 	        {0,0,0,0,0,0},
 	        {0,0,0,0,0,0},
 	        {0,0,0,0,0,0}
-	    }));
-        System.out.println(solution(new int[][]{
+	    }), 11);
+        printAssert(solution(new int[][]{
 	        {0,1,1,0,0,0},
 	        {1,0,0,0,0,0},
 	        {1,0,0,0,0,0},
 	        {0,0,0,0,0,0},
 	        {0,0,0,0,0,0},
 	        {0,0,0,0,0,0}
-	    }));
-        System.out.println(solution(new int[][]{
+	    }), 11);
+        printAssert(solution(new int[][]{
 	        {0,0,0,1,1,0},
 	        {1,1,1,0,0,0},
 	        {1,1,1,0,0,0},
 	        {0,0,0,0,0,0},
 	        {0,0,0,0,0,0},
 	        {0,0,0,0,0,0}
-	    }));
-        System.out.println(solution(new int[][]{
+	    }), 11);
+        printAssert(solution(new int[][]{
 	        {0,1,0,0,0,0},
 	        {1,1,1,1,1,0},
 	        {0,1,1,1,1,0},
 	        {0,1,1,1,1,0},
 	        {0,1,1,1,1,0},
 	        {0,0,0,0,0,0}
-	    }));
-        System.out.println(solution(new int[][]{
+	    }), 11);
+        printAssert(solution(new int[][]{
 	        {0,1,0,0,0,1},
 	        {0,1,0,1,0,1},
 	        {0,1,0,1,0,1},
 	        {0,1,0,1,0,1},
 	        {0,1,0,1,0,1},
 	        {0,0,0,1,0,0}
-	    }));
-	    System.out.println(solution(new int[][]{
+	    }), 11);
+	    printAssert(solution(new int[][]{
 	        {0,1,1,1,1,1},
 	        {0,0,0,1,1,1},
 	        {0,1,0,1,1,1},
 	        {0,0,0,1,1,1},
 	        {0,1,1,1,1,1},
 	        {0,0,0,0,0,0}
-	    }));
-        System.out.println(solution(new int[][]{
+	    }), 11);
+        printAssert(solution(new int[][]{
 	        {0,1,1,1,1,1},
 	        {0,0,0,0,0,0},
 	        {1,1,0,1,1,0},
 	        {0,0,0,1,1,0},
 	        {0,1,1,1,1,0},
 	        {0,0,0,0,0,0}
-	    }));
-        System.out.println(solution(new int[][]{
+	    }), 11);
+        printAssert(solution(new int[][]{
 	        {0,1,1,1,1,1},
 	        {0,0,0,0,0,0},
 	        {1,1,0,1,1,0},
 	        {0,0,0,1,0,0},
 	        {0,1,1,1,0,1},
 	        {0,0,0,0,0,0}
-	    }));
-	    System.out.println(solution(new int[][]{
+	    }), 11);
+	    printAssert(solution(new int[][]{
 	        {0,1,1,1,1,1},
 	        {0,0,0,1,1,1},
 	        {0,1,0,1,1,1},
 	        {0,0,0,1,1,1},
 	        {1,1,1,1,1,1},
 	        {0,0,0,0,0,0}
-	    }));
-	    System.out.println(solution(new int[][]{
+	    }), 11);
+	    printAssert(solution(new int[][]{
 	        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -124,8 +124,8 @@ public class Main
 	        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
-	    }));
-	    System.out.println(solution(new int[][]{
+	    }), 38);
+	    printAssert(solution(new int[][]{
 	        {0,0,0,0,0,0,0,0,0,0},
 	        {1,1,1,1,1,0,1,1,1,1},
 	        {1,1,1,1,1,0,1,1,1,0},
@@ -133,7 +133,7 @@ public class Main
 	        {0,1,1,1,1,1,1,1,1,0},
 	        {0,1,1,1,1,1,1,1,1,0},
 	        {0,0,0,0,0,0,0,0,0,0}
-	    }));
+	    }), 16);
 	}
 	
     static class Node {
@@ -381,7 +381,7 @@ public class Main
     }
     static void printAssert(int value, int expected) {
         for(int i=0;i<10;i++) System.out.print("=");
-        System.out.print(">  ");
+        System.out.print(">  test: ");
         if(value==expected) System.out.print("\u001B[32m"+"OK"+"\u001B[0m");
         else System.out.print("\u001B[31m"+"FAIL"+"\u001B[0m");
         if(value==expected) System.out.println();
