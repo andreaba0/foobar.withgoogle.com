@@ -24,7 +24,7 @@ public class Main
 	    };
         printAssert(solution(map1), 11);
         printAssert(solution(map2), 7);
-        printAssert(solution(map3), 3);
+        printAssert(solution(map3), 3, "Map 2x2");
         printAssert(solution(new int[][]{
 	        {0,1,0},
 	        {1,1,0},
@@ -224,8 +224,6 @@ public class Main
 
             if(
                 hasPassableWall(current.x,current.y,Direction.RIGHT,map)==1
-                //isAPossiblePath(map, rows, cols, current.x+2,current.y)==1&&
-                //hasWallBetween(current.x,current.y,current.x+2,current.y,map)==1
             ) {
                 WrapperNode tmp = new WrapperNode();
                 tmp.head = new Node(current.x+1,current.y, current);
@@ -234,8 +232,6 @@ public class Main
             }
             if(
                 hasPassableWall(current.x,current.y,Direction.LEFT,map)==1
-                //isAPossiblePath(map, rows, cols, current.x-2,current.y)==1&&
-                //hasWallBetween(current.x,current.y,current.x-2,current.y,map)==1
             ) {
                 WrapperNode tmp = new WrapperNode();
                 tmp.head = new Node(current.x-1,current.y, current);
@@ -244,8 +240,6 @@ public class Main
             }
             if(
                 hasPassableWall(current.x,current.y,Direction.DOWN,map)==1
-                //isAPossiblePath(map, rows, cols, current.x,current.y+2)==1&&
-                //hasWallBetween(current.x,current.y,current.x,current.y+2,map)==1
             ) {
                 WrapperNode tmp = new WrapperNode();
                 tmp.head = new Node(current.x,current.y+1, current);
@@ -254,8 +248,6 @@ public class Main
             }
             if(
                 hasPassableWall(current.x,current.y,Direction.UP,map)==1
-                //isAPossiblePath(map, rows, cols, current.x,current.y-2)==1&&
-                //hasWallBetween(current.x,current.y,current.x,current.y-2,map)==1
             ) {
                 WrapperNode tmp = new WrapperNode();
                 tmp.head = new Node(current.x,current.y-1, current);
@@ -379,13 +371,22 @@ public class Main
         if(bit==0) System.out.print("\u001B[90m"+"\u25A0"+"\u001B[0m");
         else System.out.print("\u001B[32m"+"\u25A0"+"\u001B[0m");
     }
-    static void printAssert(int value, int expected) {
+    static void printAssertInternal(int value, int expected, boolean hasMotd) {
         for(int i=0;i<10;i++) System.out.print("=");
         System.out.print(">  test: ");
         if(value==expected) System.out.print("\u001B[32m"+"OK"+"\u001B[0m");
         else System.out.print("\u001B[31m"+"FAIL"+"\u001B[0m");
-        if(value==expected) System.out.println();
-        else System.out.println(" (expected "+expected+", got "+value+")");
+        if(value==expected) System.out.print("");
+        else System.out.print(" (expected "+expected+", got "+value+")");
+        if(!hasMotd) System.out.println();
+    }
+    static void printAssert(int value, int expected, String motd) {
+        printAssertInternal(value, expected, true);
+        if(motd!=null) System.out.print(" "+motd);
+        System.out.println();
+    }
+    static void printAssert(int value, int expected) {
+        printAssertInternal(value, expected, false);
     }
 }
 
